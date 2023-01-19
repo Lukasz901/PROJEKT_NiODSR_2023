@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd ~/ros2_ws
+colcon build
+source install/setup.bash
+source /opt/ros/humble/setup.bash
+clear
+ros2 run projekt vel_pub --ros-args -p velocity_max:=0.5
